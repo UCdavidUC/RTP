@@ -14,7 +14,7 @@ namespace RTP.iOS
 
 		protected override IMvxApplication CreateApp()
 		{
-			return new Core.App();
+			return new RTP.App();
 		}
 		
         protected override IMvxTrace CreateDebugTrace()

@@ -55,12 +55,8 @@ namespace RTP.WinPhone
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
-        }
-
-        // Code to execute when the application is launching (eg, from Start)
-        // This code will not execute when the application is reactivated
-        private void Application_Launching(object sender, LaunchingEventArgs e)
-        {
+			var setup = new Setup(RootFrame);
+			setup.Initialize();
         }
 
         // Code to execute when the application is activated (brought to foreground)
@@ -68,6 +64,18 @@ namespace RTP.WinPhone
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
         }
+
+		private void Application_Launching(object sender, LaunchingEventArgs e)
+		{
+			RootFrame.Navigating += RootFrameOnNavigating;
+		}
+
+		private void RootFrameOnNavigating(object sender, NavigatingCancelEventArgs args)
+		{
+			args.Cancel = true;
+			RootFrame.Navigating -= RootFrameOnNavigating;
+			RootFrame.Dispatcher.BeginInvoke(() => { Cirrious.CrossCore.Mvx.Resolve<Cirrious.MvvmCross.ViewModels.IMvxAppStart>().Start(); });
+		}
 
         // Code to execute when the application is deactivated (sent to background)
         // This code will not execute when the application is closing
