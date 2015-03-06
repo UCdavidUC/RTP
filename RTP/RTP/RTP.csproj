@@ -46,7 +46,7 @@
     <Compile Include="ViewModels\InicialViewModel.cs" />
     <Compile Include="ViewModels\PasajeroViewModel.cs" />
     <Compile Include="ViewModels\PaymentViewModel.cs" />
-    <Compile Include="ViewModels\PayViewModel.cs" />
+    <Compile Include="ViewModels\CamaraViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.MvvmCross.Plugins.BarCodeScanner">

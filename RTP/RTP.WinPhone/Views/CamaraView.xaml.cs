@@ -7,10 +7,11 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Cirrious.MvvmCross.WindowsPhone.Views;
 
 namespace RTP.WinPhone.Views
 {
-    public partial class CamaraView : PhoneApplicationPage
+	public partial class CamaraView : MvxPhonePage
     {
         public CamaraView()
         {
