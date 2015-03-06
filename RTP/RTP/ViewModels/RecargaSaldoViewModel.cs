@@ -14,8 +14,8 @@ namespace RTP.ViewModels
 	{
 		public decimal SaldoActual
 		{
-			get { return UserSettings.Instance.Saldo; }
-			set { UserSettings.Instance.Saldo = value; RaisePropertyChanged(() => SaldoActual); }
+			get { return UserSettings.Saldo; }
+			set { UserSettings.Saldo = value; RaisePropertyChanged(() => SaldoActual); }
 		}
 
 		private decimal saldoARecargar;

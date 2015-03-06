@@ -12,7 +12,7 @@ namespace RTP.ViewModels
 	{
 		public decimal Saldo
 		{
-			get { return UserSettings.Instance.Saldo; }
+			get { return UserSettings.Saldo; }
 		}
 
 		public ICommand Recarga
