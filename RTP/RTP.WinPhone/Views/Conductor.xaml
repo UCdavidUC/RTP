@@ -1,5 +1,5 @@
 ﻿<views:MvxPhonePage
-    x:Class="RTP.WinPhone.Views.ExitoPago"
+    x:Class="RTP.WinPhone.Views.Conductor"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -24,16 +24,19 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="RTP-Smart" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Pago" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Conductor" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,12">
-            <StackPanel x:Name="Mensajes" Margin="0,0,0,0">
-                <TextBlock x:Name="PagoRealizado" Text="El pagó se realizó con éxito" Style="{StaticResource PhoneTextLargeStyle}"/>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel x:Name="TextBoxes" Margin="0,0,0,0">
+                <TextBlock x:Name="UsuarioLabel" Text="Usuario:" Style="{StaticResource PhoneTextLargeStyle}"/>
+                <TextBox x:Name="Usuario" />
+                <TextBlock x:Name="PassLabel" Text="Contraseña:" Style="{StaticResource PhoneTextLargeStyle}"/>
+                <TextBox x:Name="Pass" />
             </StackPanel>
-            <StackPanel x:Name="DetalleSaldo" Margin="0,250,0,12">
-                <TextBlock x:Name="SaldoActual" Text="SaldoActual:" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <StackPanel x:Name="LoginButton" Margin="0,300,0,0">
+                <Button x:Name="Login" Content="Login" HorizontalAlignment="Center" Width="350"/>
             </StackPanel>
         </Grid>
     </Grid>
