@@ -31,6 +31,7 @@ namespace RTP.Services
 			catch (Exception)
 			{
 				loginId = default(Guid);
+				throw;
 			}
 #endif
 		}

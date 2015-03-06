@@ -26,8 +26,8 @@
 
         <StackPanel x:Name="SelecTipoUsuaio" Margin="0,22,0,0" Height="716" VerticalAlignment="Top" Grid.RowSpan="2">
             <Image HorizontalAlignment="Center" Height="119" Margin="40,70,40,0" Width="400" VerticalAlignment="Center" Source="/Views/Logo.png" />
-            <Button x:Name="SPasajero" Margin="120,30,110,0" Content="Soy Pasajero" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFE1F5C5" Height="160" MinHeight="100" Width="270" MinWidth="200" Command="{Binding PassengerCommand}" FontFamily="Lao UI" BorderBrush="#FF8EC642" Foreground="Black" Click="SPasajero_Click"/>
-            <Button x:Name="SConductor" Margin="110,35,100,0" Content="Soy Conductor" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFFFCA8D" Height="160" MinHeight="100" Width="270" MinWidth="200" FontFamily="Lao UI" BorderBrush="#FFF1972E" Foreground="Black"/>
+            <Button Margin="120,30,110,0" Content="Soy Pasajero" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFE1F5C5" Height="160" MinHeight="100" Width="270" MinWidth="200" Command="{Binding PassengerCommand}" FontFamily="Lao UI" BorderBrush="#FF8EC642" Foreground="Black"/>
+			<Button Margin="110,35,100,0" Content="Soy Conductor" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFFFCA8D" Height="160" MinHeight="100" Width="270" MinWidth="200" Command="{Binding DriverCommand}" FontFamily="Lao UI" BorderBrush="#FFF1972E" Foreground="Black"/>
 
         </StackPanel>
 

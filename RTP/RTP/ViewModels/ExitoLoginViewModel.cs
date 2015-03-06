@@ -6,7 +6,7 @@ using System.Text;
 
 namespace RTP.ViewModels
 {
-	public class DriverLoginViewModel : MvxViewModel
+	public class ExitoLoginViewModel : MvxViewModel
 	{
 	}
 }
