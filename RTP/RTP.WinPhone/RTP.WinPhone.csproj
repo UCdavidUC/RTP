@@ -106,9 +106,6 @@
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\CamaraView.xaml.cs">
-      <DependentUpon>CamaraView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\CobroView.xaml.cs">
       <DependentUpon>CobroView.xaml</DependentUpon>
     </Compile>
@@ -151,10 +148,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="Views\CamaraView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\CobroView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -212,6 +205,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Properties\_SettingsStarted.txt" />
     <Content Include="README_FIRST.txt" />
     <Content Include="SplashScreenImage.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -255,7 +249,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
+    <Reference Include="Acr.MvvmCross.Plugins.BarCodeScanner">
+      <HintPath>..\..\packages\Acr.MvvmCross.Plugins.BarCodeScanner.2.0.0\lib\wp8\Acr.MvvmCross.Plugins.BarCodeScanner.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.MvvmCross.Plugins.BarCodeScanner.WindowsPhone, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\barcode-fix\Acr.MvvmCross.Plugins.BarCodeScanner.WindowsPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.MvvmCross.Plugins.UserDialogs, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Acr.MvvmCross.Plugins.UserDialogs.2.4.0\lib\wp8\Acr.MvvmCross.Plugins.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.MvvmCross.Plugins.UserDialogs.WindowsPhone">
+      <HintPath>..\..\packages\Acr.MvvmCross.Plugins.UserDialogs.2.4.0\lib\wp8\Acr.MvvmCross.Plugins.UserDialogs.WindowsPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\wp8\Cirrious.CrossCore.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.CrossCore.WindowsPhone">
@@ -267,11 +276,26 @@
     <Reference Include="Cirrious.MvvmCross.Localization">
       <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\wp8\Cirrious.MvvmCross.Localization.dll</HintPath>
     </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.5.0\lib\wp8\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
     <Reference Include="Cirrious.MvvmCross.WindowsPhone">
       <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0\lib\wp8\Cirrious.MvvmCross.WindowsPhone.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.Xam.Settings">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.1.5.0\lib\wp8\Refractored.Xam.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.Xam.Settings.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.1.5.0\lib\wp8\Refractored.Xam.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="WriteableBitmapExWinPhone, Version=0.9.8.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\ZXing.Net.Mobile.1.4.7.1\lib\wp8\WriteableBitmapExWinPhone.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\..\packages\Xamarin.Forms.1.3.1.6296\lib\WP80\Xamarin.Forms.Core.dll</HintPath>
@@ -281,6 +305,14 @@
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\..\packages\Xamarin.Forms.1.3.1.6296\lib\WP80\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.wp8.0, Version=0.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\ZXing.Net.Mobile.1.4.7.1\lib\wp8\zxing.wp8.0.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXingNetMobile, Version=1.4.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\ZXing.Net.Mobile.1.4.7.1\lib\wp8\ZXingNetMobile.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup />

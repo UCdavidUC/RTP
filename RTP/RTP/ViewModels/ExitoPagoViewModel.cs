@@ -6,8 +6,7 @@ using System.Text;
 
 namespace RTP.ViewModels
 {
-	public class PayViewModel : MvxViewModel
+	public class ExitoPagoViewModel : MvxViewModel
 	{
-		
 	}
 }

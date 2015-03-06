@@ -1,5 +1,5 @@
-﻿using Akavache;
-using Lager;
+﻿using Refractored.Xam.Settings;
+using Refractored.Xam.Settings.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,46 +8,35 @@ using System.Threading.Tasks;
 
 namespace RTP.Services
 {
-	public class UserSettings : SettingsStorage
+	public static class UserSettings
 	{
-		private UserSettings()
-			: base("D5702B73-854F-4E92-93DD-99DB026918B4", Cache)
-		{ }
-
-		private static IBlobCache Cache = BlobCache.UserAccount;
-
-		public static UserSettings Instance
+		private static ISettings AppSettings
 		{
-			get { return new UserSettings(); }
+			get { return CrossSettings.Current; }
 		}
 
-		~UserSettings()
+		public static bool InicióSesión
 		{
-			Cache.Flush();
+			get { return	AppSettings.GetValueOrDefault	("InicióSesión", false); }
+			set {	AppSettings.AddOrUpdateValue	("InicióSesión", value); }
 		}
 
-		public bool InicióSesión
+		public static bool EsPasajero
 		{
-			get { return GetOrCreate(false); }
-			set { SetOrCreate(value); }
+			get { return	AppSettings.GetValueOrDefault	("EsPasajero", true); }
+			set {	AppSettings.AddOrUpdateValue	("EsPasajero", value); }
 		}
 
-		public bool EsPasajero
+		public static Guid UserId
 		{
-			get { return GetOrCreate(true); }
-			set { SetOrCreate(value); }
+			get { return	AppSettings.GetValueOrDefault	("UserId", default(Guid)); }
+			set {	AppSettings.AddOrUpdateValue	("UserId", value); }
 		}
 
-		public Guid UserId
+		public static decimal Saldo
 		{
-			get { return GetOrCreate(default(Guid)); }
-			set { SetOrCreate(value); }
-		}
-
-		public decimal Saldo
-		{
-			get { return GetOrCreate(0.00M); }
-			set { SetOrCreate(value); }
+			get { return	AppSettings.GetValueOrDefault	("Saldo", 0.00M); }
+			set {	AppSettings.AddOrUpdateValue	("Saldo", value); }
 		}
 	}
 }
