@@ -1,5 +1,7 @@
 ﻿using Cirrious.MvvmCross.WindowsPhone.Views;
 using RTP.ViewModels;
+using System;
+using System.Collections.Generic;
 
 namespace RTP.WinPhone.Views
 {

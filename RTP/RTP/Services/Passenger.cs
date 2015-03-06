@@ -52,6 +52,10 @@ namespace RTP.Services
 
 		public static async Task<bool> SendPayment(Guid paymentId)
 		{
+#if DEBUG
+			UserSettings.Saldo -= 5.00M;
+			return true;
+#else
 			var request = new RestRequest("api/SendPayment", HttpMethod.Post);
 			request.AddParameter("paymentId", paymentId);
 
@@ -59,6 +63,7 @@ namespace RTP.Services
 
 			var result = await client.Execute<bool>(request);
 			return result.Data;
+#endif
 		}
 	}
 }
