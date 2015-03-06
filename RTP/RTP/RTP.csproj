@@ -42,6 +42,7 @@
     <Compile Include="Services\UserSettings.cs" />
     <Compile Include="ViewModels\ExitoLoginViewModel.cs" />
     <Compile Include="ViewModels\ExitoPagoViewModel.cs" />
+    <Compile Include="ViewModels\HistorialViewModel.cs" />
     <Compile Include="ViewModels\RecargaSaldoViewModel.cs" />
     <Compile Include="ViewModels\ConductorViewModel.cs" />
     <Compile Include="ViewModels\DriverViewModel.cs" />
