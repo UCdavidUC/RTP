@@ -112,6 +112,9 @@
     <Compile Include="Views\Conductor.xaml.cs">
       <DependentUpon>Conductor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DetalleCobroView.xaml.cs">
+      <DependentUpon>DetalleCobroView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ErrorLoginView.xaml.cs">
       <DependentUpon>ErrorLoginView.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Conductor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetalleCobroView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
