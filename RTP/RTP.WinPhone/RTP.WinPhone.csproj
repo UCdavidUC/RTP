@@ -106,11 +106,23 @@
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Setup.cs" />
+    <Compile Include="Views\CobroView.xaml.cs">
+      <DependentUpon>CobroView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Conductor.xaml.cs">
       <DependentUpon>Conductor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ErrorLoginView.xaml.cs">
+      <DependentUpon>ErrorLoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExitoLogin.xaml.cs">
+      <DependentUpon>ExitoLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ExitoPago.xaml.cs">
       <DependentUpon>ExitoPago.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HistorialView.xaml.cs">
+      <DependentUpon>HistorialView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\InicialView.xaml.cs">
       <DependentUpon>InicialView.xaml</DependentUpon>
@@ -121,6 +133,9 @@
     <Compile Include="Views\RecargaSaldoView.xaml.cs">
       <DependentUpon>RecargaSaldoView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\QRView.xaml.cs">
+      <DependentUpon>QRView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RechazoPago.xaml.cs">
       <DependentUpon>RechazoPago.xaml</DependentUpon>
     </Compile>
@@ -130,11 +145,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Views\CobroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Conductor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ErrorLoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExitoLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ExitoPago.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HistorialView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,6 +178,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\RecargaSaldoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\QRView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

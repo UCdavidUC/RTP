@@ -2,9 +2,9 @@
 
 namespace RTP.WinPhone.Views
 {
-    public partial class ExitoLogin : MvxPhonePage
+    public partial class ErrorLoginView : MvxPhonePage
     {
-        public ExitoLogin()
+        public ErrorLoginView()
         {
             InitializeComponent();
         }
