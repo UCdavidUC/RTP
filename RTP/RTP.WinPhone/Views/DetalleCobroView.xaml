@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -22,28 +22,31 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="RTP-Smart" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Cobro" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Cobro" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Lao UI" Foreground="#FFF1972E"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="14,0,10,0">
             <StackPanel x:Name="Cobros" Margin="0,0,0,0">
-                <TextBlock x:Name="CobroRealizado" Text="Cobro Realizado." HorizontalAlignment="Center" Style="{StaticResource PhoneTextLargeStyle}"/>
+                <TextBlock x:Name="CobroRealizado" Text="Cobro Realizado" HorizontalAlignment="Center" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFAA6C24"/>
             </StackPanel>
             <StackPanel x:Name="DetalleCobro" Margin="0,100,0,0">
-                <TextBlock x:Name="Total" Text="Total:" Style="{StaticResource PhoneTextLargeStyle}"/>
-                <TextBlock x:Name="NumPasajeros" Text="No. Pasajeros:" Style="{StaticResource PhoneTextLargeStyle}"/>
+                <TextBlock x:Name="Total" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFF1972E">
+            		<Run Text="Total"/>
+            		<Run Text=":"/>
+                </TextBlock>
+                <TextBlock x:Name="NumPasajeros" Text="No. Pasajeros:" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFF1972E" Margin="12,0,228,0"/>
             </StackPanel>
             <StackPanel x:Name="TextBoxDetalles" Margin="100,100,10,463">
-                <TextBlock x:Name="TotalResultado" Height="43" />
+                <TextBlock x:Name="TotalResultado" Height="43" FontFamily="Lao UI" Foreground="#FFAA6C24" />
             </StackPanel>
             <StackPanel x:Name="TextBoxDetalles2" Margin="220,140,10,420">
-                <TextBlock x:Name="NPasajerosResultado" />
+                <TextBlock x:Name="NPasajerosResultado" Foreground="#FFAA6C24" />
             </StackPanel>
             <StackPanel x:Name="Cobro" Margin="0,300,0,0">
-                <Button x:Name="CobrarDeNuevo" Content="Cobrar de Nuevo"/>
+                <Button x:Name="CobrarDeNuevo" Content="Cobrar de Nuevo" FontFamily="Lao UI" Foreground="#FFAA6C24" Background="#FFFFCA8D" BorderBrush="#FFAA6C24" Width="400" Height="110" FontSize="35"/>
             </StackPanel>
+            <Image Height="40" Source="/Views/Logo.png" Margin="0,0,0,10" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 

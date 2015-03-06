@@ -15,7 +15,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -23,15 +23,16 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="RTP-Smart" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Cobrar" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Cobrar" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Lao UI" Foreground="#FFF1972E"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel Grid.Row="0" Margin="0,0,0,0">
-                <Button x:Name="Cobrar" Content="Cobrar" />
-                <Button x:Name="Historial" Content="Historial"/>
+                <Button x:Name="Cobrar" Content="Cobrar" FontFamily="Lao UI" Foreground="#FFAA6C24" BorderBrush="#FFAA6C24" Background="#FFFFCA8D" Width="400" Height="110" Margin="0,70,0,0" FontSize="35" />
+                <Button x:Name="Historial" Content="Historial" FontFamily="Lao UI" Foreground="#FFAA6C24" BorderBrush="#FFAA6C24" Background="#FFFFCA8D" Width="400" Height="110" Margin="0,40,0,0" FontSize="35"/>
+                <Image Height="40" Source="/Views/Logo.png" Margin="0,250,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            
             </StackPanel>
         </Grid>
     </Grid>

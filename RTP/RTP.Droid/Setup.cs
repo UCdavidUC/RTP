@@ -21,7 +21,7 @@ namespace RTP.Droid
             return new DebugTrace();
         }
 
-		public override void LoadPlugins(IMvxPluginManager pluginManager)
+		public override void LoadPlugins(Cirrious.CrossCore.Plugins.IMvxPluginManager pluginManager)
 		{
 			base.LoadPlugins(pluginManager);
 			pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Messenger.PluginLoader>();

@@ -15,7 +15,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -23,19 +23,20 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="RTP-Smart" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Pago" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Pago" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Lao UI" Foreground="#FFF1972E"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel x:Name="Mensajes" Margin="12,12,12,12">
-                <TextBlock x:Name="PagoRechazado" Text="El pago fue rechazado" HorizontalAlignment="Center" Style="{StaticResource PhoneTextLargeStyle}"/>
+                <TextBlock x:Name="PagoRechazado" Text="El pago fue rechazado" HorizontalAlignment="Center" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFAA6C24" FontSize="35"/>
             </StackPanel>
             <StackPanel x:Name="Seleccion" Margin="12,100,12,12">
-                <Button x:Name="IntentarDeNuevo" Content="Intentar de Nuevo" />
-                <Button x:Name="Cancelar" Content="Cancelar" />
+                <Button x:Name="IntentarDeNuevo" Content="Intentar de Nuevo" FontFamily="Lao UI" Foreground="#FFAA6C24" BorderBrush="#FFAA6C24" Background="#FFFFCA8D" Width="400" Height="110" FontSize="30" Margin="0,25,0,0" />
+                <Button x:Name="Cancelar" Content="Cancelar" FontFamily="Lao UI" Foreground="#FFF1972E" BorderBrush="#FFF1972E" Background="#FFFFCA8D" Width="400" Height="110" FontSize="30" Margin="0,10,0,0" Click="Cancelar_Click" />
             </StackPanel>
+            <Image Height="40" Source="/Views/Logo.png" Margin="0,350,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+
         </Grid>
     </Grid>
 

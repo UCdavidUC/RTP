@@ -23,19 +23,20 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Conductor" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Lao UI" Foreground="#FF894343"/>
+            <TextBlock Text="Conductor" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Lao UI" Foreground="#FFF1972E"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel x:Name="TextBoxes" Margin="0,0,0,0">
-                <TextBlock x:Name="UsuarioLabel" Text="Usuario:" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFF19704"/>
-                <TextBox x:Name="Usuario" FontFamily="Lao UI" Foreground="Black" />
-                <TextBlock x:Name="PassLabel" Text="Contraseña:" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="Black"/>
-                <TextBox x:Name="Pass" FontFamily="Lao UI" Foreground="Black" />
+                <TextBlock x:Name="UsuarioLabel" Text="Usuario:" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFAA6C24"/>
+                <TextBox x:Name="Usuario" FontFamily="Lao UI" Foreground="#FFAA6C24" Background="#FFFFCA8D" />
+                <TextBlock x:Name="PassLabel" Text="Contraseña:" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFAA6C24"/>
+                <TextBox x:Name="Pass" FontFamily="Lao UI" Foreground="#FFAA6C24" Background="#FFFFCA8D" />
+                <Image Height="40" Source="/Views/Logo.png" Margin="0,350,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
             </StackPanel>
             <StackPanel x:Name="LoginButton" Margin="0,300,0,0">
-                <Button x:Name="Login" Content="Login" HorizontalAlignment="Center" Width="350" FontFamily="Lao UI" Foreground="Black"/>
+                <Button x:Name="Login" Content="Login" HorizontalAlignment="Center" Width="350" FontFamily="Lao UI" Foreground="#FFAA6C24" BorderBrush="#FFAA6C24" Background="#FFFFCA8D" Height="100"/>
             </StackPanel>
         </Grid>
     </Grid>
