@@ -1,12 +1,11 @@
-<views:MvxPhonePage
-    x:Class="RTP.WinPhone.Views.FirstView"
+﻿<phone:PhoneApplicationPage
+    x:Class="RTP.WinPhone.Views.RecargaSaldo"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:views="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Views;assembly=Cirrious.MvvmCross.WindowsPhone"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -22,15 +21,23 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="RTP-Smart" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="Title" Text="Inicio" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="RTP-Smart" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Recarga" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
-        <StackPanel x:Name="SelecTipoUsuaio" Grid.Row="1" Margin="0,17,0,28">
-            <Button x:Name="SPasajero" Margin="9,7,0,0" Content="Soy Pasajero" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Blue" Height="120" MinHeight="100" Width="250" MinWidth="200"/>
-            <Button x:Name="SConductor" Margin="9,7,0,0" Content="Soy Conductor" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Red" Height="120" MinHeight="100" Width="250" MinWidth="200"/>
+        <!--ContentPanel - place additional content here-->
+        <StackPanel x:Name="RecargaSaldo" Grid.Row="1" Margin="12,0,12,12">
+            <Button x:Name="GooglePlay" Content="Cuenta de Google Play" />
+            <Button x:Name="SMS" Content="Via SMS" />
         </StackPanel>
+        
+        <StackPanel x:Name="Cuenta" Grid.Row="2" Margin="12,200">
+            <TextBlock x:Name="SaldoAnterior" Text="Saldo Anterior: " Style="{StaticResource PhoneTextLargeStyle}" />
+            <TextBlock x:Name="SaldoRecrargado" Text="Saldo Recargado: " Style="{StaticResource PhoneTextLargeStyle}" />
+            <TextBlock x:Name="SaldoAcutual" Text="Saldo Actual: " Style="{StaticResource PhoneTextLargeStyle}" />
+        </StackPanel>
+        
     </Grid>
 
-</views:MvxPhonePage>
+</phone:PhoneApplicationPage>
