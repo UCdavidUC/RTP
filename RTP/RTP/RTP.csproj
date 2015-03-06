@@ -40,11 +40,17 @@
     <Compile Include="Services\Driver.cs" />
     <Compile Include="Services\Passenger.cs" />
     <Compile Include="Services\UserSettings.cs" />
+<<<<<<< HEAD
     <Compile Include="ViewModels\CobroViewModel.cs" />
     <Compile Include="ViewModels\ExitoPagoViewModel.cs" />
     <Compile Include="ViewModels\QRViewModel.cs" />
+=======
+    <Compile Include="ViewModels\ExitoLoginViewModel.cs" />
+    <Compile Include="ViewModels\ExitoPagoViewModel.cs" />
+    <Compile Include="ViewModels\HistorialViewModel.cs" />
+>>>>>>> origin/master
     <Compile Include="ViewModels\RecargaSaldoViewModel.cs" />
-    <Compile Include="ViewModels\DriverLoginViewModel.cs" />
+    <Compile Include="ViewModels\ConductorViewModel.cs" />
     <Compile Include="ViewModels\DriverViewModel.cs" />
     <Compile Include="ViewModels\InicialViewModel.cs" />
     <Compile Include="ViewModels\PasajeroViewModel.cs" />

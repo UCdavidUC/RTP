@@ -16,6 +16,10 @@ namespace RTP.Services
 
 		public static async Task Login(string username, string password)
 		{
+#if DEBUG
+			loginId = Guid.NewGuid();
+			return;
+#else
 			var request = new RestRequest("api/LoginDriver", HttpMethod.Post);
 			request.AddParameter("username", username);
 			request.AddParameter("password", password);
@@ -28,7 +32,9 @@ namespace RTP.Services
 			catch (Exception)
 			{
 				loginId = default(Guid);
+				throw;
 			}
+#endif
 		}
 
 		public static async Task<Guid> RequestPayment(int passengerCount, int passengerWithDiscountCount)

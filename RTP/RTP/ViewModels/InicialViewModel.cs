@@ -24,7 +24,13 @@ namespace RTP.ViewModels
 
 		public ICommand DriverCommand
 		{
-			get { return new MvxCommand(() => ShowViewModel<DriverLoginViewModel>()); }
+			get
+			{
+				return new MvxCommand(() =>
+				{
+					ShowViewModel<ConductorViewModel>();
+				});
+			}
 		}
     }
 }

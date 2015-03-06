@@ -30,10 +30,17 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Grid.Column="0" Margin="12,0,12,0">
             <TextBlock x:Name="Pasajero" Text="Número de pasajeros:" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFAA6C24"/>
             <StackPanel x:Name="BarraCuentas" Margin="40,100,40,40">
+<<<<<<< HEAD
                 <Button x:Name="Plus" Content="+" Height="110" FontFamily="Lao UI" Foreground="#FFAA6C24" BorderBrush="#FFAA6C24" Background="#FFFFCA8D" FontSize="55" Margin="-15,-25,-9,0" Width="400" FontWeight="Bold" Command="{Binding plusAction}" />
                 <TextBox x:Name="Num" Text="{Binding NumeroPasajeros}" HorizontalAlignment="Center" Width="70" FontFamily="Lao UI" Foreground="#FFC68B46" TextAlignment="Center" FontWeight="Bold" FontSize="35" Height="75"/>
                 <Button x:Name="Minus" Content="-" Height="110" FontFamily="Lao UI" Foreground="#FFAA6C24" BorderBrush="#FFAA6C24" Background="#FFFFCA8D" FontSize="55" Width="400" Margin="-15,0,0,0" FontWeight="Bold" Command="{Binding minusAction}"/>
                 <Button x:Name="Cobrar" Height="100" Content="Cobrar" FontFamily="Lao UI" Foreground="#FFF1972E" BorderBrush="#FFF1972E" Background="#FFFFCA8D" FontSize="35" Margin="0,40,0,0" HorizontalAlignment="Center" Width="250" Command="{Binding}"/>
+=======
+                <Button x:Name="Plus" Content="+" Height="110" FontFamily="Lao UI" Foreground="#FFAA6C24" BorderBrush="#FFAA6C24" Background="#FFFFCA8D" FontSize="55" Margin="-15,-25,-9,0" Width="400" FontWeight="Bold"/>
+                <TextBox x:Name="Num" Text="1" HorizontalAlignment="Center" Width="70" FontFamily="Lao UI" Foreground="#FFC68B46" TextAlignment="Center" FontWeight="Bold" FontSize="35" Height="75"/>
+                <Button x:Name="Minus" Content="-" Height="110" FontFamily="Lao UI" Foreground="#FFAA6C24" BorderBrush="#FFAA6C24" Background="#FFFFCA8D" FontSize="55" Width="400" Margin="-15,0,0,0" FontWeight="Bold"/>
+                <Button x:Name="Cobrar" Height="100" Content="Cobrar" FontFamily="Lao UI" Foreground="#FFF1972E" BorderBrush="#FFF1972E" Background="#FFFFCA8D" FontSize="35" Margin="0,40,0,0" HorizontalAlignment="Center" Width="250" />
+>>>>>>> origin/master
 
             </StackPanel>
             <Image Height="40" Source="/Views/Logo.png" Margin="0,0,0,10" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
