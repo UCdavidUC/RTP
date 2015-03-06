@@ -13,8 +13,7 @@ namespace RTP.ViewModels
 		{
 			get
 			{
-				return null;
-				//return new MvxCommand(() => ShowViewModel<CobroViewModel>());
+				return new MvxCommand(() => ShowViewModel<CobroViewModel>());
 			}
 		}
 
