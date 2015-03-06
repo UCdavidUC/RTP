@@ -15,7 +15,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -23,32 +23,32 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="RTP-Smart" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Recarga" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Recarga" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Lao UI" Foreground="#FF3D5917"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <StackPanel x:Name="Recargas" Grid.Row="1" Margin="12,0,12,12">
 
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="*"/>
-				</Grid.ColumnDefinitions>
-				<TextBlock Grid.Column="0" Text="Saldo actual: " Style="{StaticResource PhoneTextLargeStyle}" />
-				<TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="{Binding SaldoActual}" Style="{StaticResource PhoneTextLargeStyle}" />
-			</Grid>
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="150"/>
-				</Grid.ColumnDefinitions>
-				<TextBlock Grid.Column="0" Text="Saldo a recargar: " Style="{StaticResource PhoneTextLargeStyle}" />
-				<TextBox Grid.Column="1" InputScope="CurrencyAmount" Text="{Binding SaldoARecargar, Mode=TwoWay}"/>
-			</Grid>
+            <Grid Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Saldo actual: " Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FF8EC642" />
+                <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="{Binding SaldoActual}" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FF3D5917" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Saldo a recargar: " Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FF8EC642" Margin="12,20,12,0" />
+                <TextBox Grid.Column="1" InputScope="CurrencyAmount" Text="{Binding SaldoARecargar, Mode=TwoWay}" FontFamily="Lao UI" Foreground="#FF3D5917" Background="#FFE1F5C5" Width="170" Margin="-100,12,0,0"/>
+            </Grid>
 
-			<Button Command="{Binding GooglePlay}" Content="Cuenta de Google Play" />
-			<Button Command="{Binding SMS}" Content="Via SMS" />
+            <Button Command="{Binding GooglePlay}" Content="Cuenta de Google Play" FontFamily="Lao UI" Foreground="#FF3D5917" BorderBrush="#FF3D5917" Background="#FFE1F5C5" Width="400" Height="110" Margin="0,50,0,0" />
+            <Button Command="{Binding SMS}" Content="Via SMS" FontFamily="Lao UI" Foreground="#FF3D5917" BorderBrush="#FF3D5917" Background="#FFE1F5C5" Width="400" Height="110" />
+            <Image Height="40" Source="/Views/Logo.png" Margin="0,160,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
 
     </Grid>

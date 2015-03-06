@@ -1,5 +1,5 @@
 ﻿<views:MvxPhonePage
-    x:Class="RTP.WinPhone.Views.RechazoPago"
+    x:Class="RTP.WinPhone.Views.RechazoPagoView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -30,7 +30,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel x:Name="Mensajes" Margin="12,12,12,12">
-                <TextBlock x:Name="PagoRechazado" Text="El pago fue rechazado" Style="{StaticResource PhoneTextLargeStyle}"/>
+                <TextBlock x:Name="PagoRechazado" Text="El pago fue rechazado" HorizontalAlignment="Center" Style="{StaticResource PhoneTextLargeStyle}"/>
             </StackPanel>
             <StackPanel x:Name="Seleccion" Margin="12,100,12,12">
                 <Button x:Name="IntentarDeNuevo" Content="Intentar de Nuevo" />

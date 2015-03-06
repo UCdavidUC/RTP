@@ -13,9 +13,9 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
-    
+
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -23,18 +23,18 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="RTP-Smart" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Pasajero" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Pasajero" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="#FF3D5917" FontFamily="Lao UI"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <StackPanel Grid.Row="1" Margin="12,17,12,28">
-			<StackPanel Orientation="Horizontal">
-				<TextBlock Text="Saldo: " Style="{StaticResource PhoneTextLargeStyle}" />
-				<TextBlock Text="{Binding Saldo}" Style="{StaticResource PhoneTextLargeStyle}" />
-			</StackPanel>
-            <Button Command="{Binding Recarga}" Content="Recargar Saldo" VerticalAlignment="Top"/>
-			<Button Command="{Binding Paga}" Content="Pagar Pasaje" VerticalAlignment="Top"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Saldo: " Style="{StaticResource PhoneTextLargeStyle}" Foreground="#FF3D5917" FontFamily="Lao UI" FontSize="40" />
+                <TextBlock Text="{Binding Saldo}" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FF3D5917" />
+            </StackPanel>
+            <Button Command="{Binding Recarga}" Content="Recargar Saldo" VerticalAlignment="Top" Foreground="#FF3D5917" Background="#FFE1F5C5" BorderBrush="#FF8EC642" HorizontalAlignment="Center" Width="400" Height="110" Margin="0,50,0,0" FontSize="25" FontFamily="Lao UI"/>
+            <Button Command="{Binding Paga}" Content="Pagar Pasaje" VerticalAlignment="Top" BorderBrush="#FF8EC642" Foreground="#FF3D5917" Background="#FFE1F5C5" Width="400" Height="110" Margin="0,40,0,0" FontSize="25" FontFamily="Lao UI"/>
+            <Image Height="40" Source="/Views/Logo.png" Margin="0,190,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
     </Grid>
 

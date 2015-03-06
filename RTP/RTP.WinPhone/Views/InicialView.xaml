@@ -15,22 +15,23 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="RTP-Smart" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="Title" Text="Inicio" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"/>
+
+        <StackPanel x:Name="SelecTipoUsuaio" Margin="0,22,0,0" Height="716" VerticalAlignment="Top" Grid.RowSpan="2">
+            <Image HorizontalAlignment="Center" Height="119" Margin="40,70,40,0" Width="400" VerticalAlignment="Center" Source="/Views/Logo.png" />
+            <Button x:Name="SPasajero" Margin="120,30,110,0" Content="Soy Pasajero" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFE1F5C5" Height="160" MinHeight="100" Width="270" MinWidth="200" Command="{Binding PassengerCommand}" FontFamily="Lao UI" BorderBrush="#FF8EC642" Foreground="Black" Click="SPasajero_Click"/>
+            <Button x:Name="SConductor" Margin="110,35,100,0" Content="Soy Conductor" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFFFCA8D" Height="160" MinHeight="100" Width="270" MinWidth="200" FontFamily="Lao UI" BorderBrush="#FFF1972E" Foreground="Black"/>
+
         </StackPanel>
 
-        <StackPanel x:Name="SelecTipoUsuaio" Grid.Row="1" Margin="0,17,0,28">
-			<Button x:Name="SPasajero" Margin="9,7,0,0" Content="Soy Pasajero" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Blue" Height="120" MinHeight="100" Width="250" MinWidth="200" Command="{Binding PassengerCommand}"/>
-            <Button x:Name="SConductor" Margin="9,7,0,0" Content="Soy Conductor" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Red" Height="120" MinHeight="100" Width="250" MinWidth="200"/>
-        </StackPanel>
+
     </Grid>
 
 </views:MvxPhonePage>
