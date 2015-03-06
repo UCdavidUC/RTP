@@ -115,9 +115,6 @@
     <Compile Include="Views\DetalleCobroView.xaml.cs">
       <DependentUpon>DetalleCobroView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ErrorLoginView.xaml.cs">
-      <DependentUpon>ErrorLoginView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\ExitoLoginView.xaml.cs">
       <DependentUpon>ExitoLoginView.xaml</DependentUpon>
     </Compile>
@@ -139,9 +136,6 @@
     <Compile Include="Views\RecargaSaldoView.xaml.cs">
       <DependentUpon>RecargaSaldoView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\RechazoPagoView.xaml.cs">
-      <DependentUpon>RechazoPagoView.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -161,10 +155,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DetalleCobroView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ErrorLoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,10 +185,6 @@
     <Page Include="Views\RecargaSaldoView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\RechazoPagoView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

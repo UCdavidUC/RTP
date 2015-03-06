@@ -40,7 +40,9 @@
     <Compile Include="Services\Driver.cs" />
     <Compile Include="Services\Passenger.cs" />
     <Compile Include="Services\UserSettings.cs" />
+    <Compile Include="ViewModels\CobroViewModel.cs" />
     <Compile Include="ViewModels\ExitoPagoViewModel.cs" />
+    <Compile Include="ViewModels\QRViewModel.cs" />
     <Compile Include="ViewModels\RecargaSaldoViewModel.cs" />
     <Compile Include="ViewModels\DriverLoginViewModel.cs" />
     <Compile Include="ViewModels\DriverViewModel.cs" />
