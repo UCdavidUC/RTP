@@ -10,9 +10,21 @@ namespace RTP.Services
 {
 	public class UserSettings : SettingsStorage
 	{
-		public UserSettings()
-			: base("D5702B73-854F-4E92-93DD-99DB026918B4", BlobCache.UserAccount)
+		private UserSettings()
+			: base("D5702B73-854F-4E92-93DD-99DB026918B4", Cache)
 		{ }
+
+		private static IBlobCache Cache = BlobCache.UserAccount;
+
+		public static UserSettings Instance
+		{
+			get { return new UserSettings(); }
+		}
+
+		~UserSettings()
+		{
+			Cache.Flush();
+		}
 
 		public bool InicióSesión
 		{
@@ -32,19 +44,7 @@ namespace RTP.Services
 			set { SetOrCreate(value); }
 		}
 
-		public decimal SaldoActual
-		{
-			get { return GetOrCreate(0.00M); }
-			set { SetOrCreate(value); }
-		}
-
-		public decimal SaldoRecargado
-		{
-			get { return GetOrCreate(0.00M); }
-			set { SetOrCreate(value); }
-		}
-
-		public decimal SaldoAnterior
+		public decimal Saldo
 		{
 			get { return GetOrCreate(0.00M); }
 			set { SetOrCreate(value); }

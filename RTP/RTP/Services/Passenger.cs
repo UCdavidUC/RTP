@@ -37,6 +37,9 @@ namespace RTP.Services
 
 		public static async Task<bool> AddCredit(decimal amount)
 		{
+#if DEBUG
+			return true;
+#else
 			var request = new RestRequest("api/AddCredit", HttpMethod.Post);
 			request.AddParameter("amount", amount);
 
@@ -44,6 +47,7 @@ namespace RTP.Services
 
 			var result = await client.Execute<bool>(request);
 			return result.Data;
+#endif
 		}
 
 		public static async Task<bool> SendPayment(Guid paymentId)

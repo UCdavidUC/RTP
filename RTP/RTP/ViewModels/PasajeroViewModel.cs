@@ -1,4 +1,5 @@
 ﻿using Cirrious.MvvmCross.ViewModels;
+using RTP.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,9 @@ namespace RTP.ViewModels
 {
 	public class PasajeroViewModel : MvxViewModel
 	{
-		private decimal saldo = 0.00M;
-
 		public decimal Saldo
 		{
-			get { return saldo; }
-			set { saldo = value; RaisePropertyChanged(() => Saldo); }
+			get { return UserSettings.Instance.Saldo; }
 		}
 
 		public ICommand Recarga

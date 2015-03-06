@@ -1,6 +1,7 @@
 ﻿using Acr.MvvmCross.Plugins.UserDialogs;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
+using RTP.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,10 @@ namespace RTP.ViewModels
 {
 	public class RecargaSaldoViewModel : MvxViewModel
 	{
-		private decimal saldoActual;
 		public decimal SaldoActual
 		{
-			get { return saldoActual; }
-			set { saldoActual = value; RaisePropertyChanged(() => SaldoActual); }
+			get { return UserSettings.Instance.Saldo; }
+			set { UserSettings.Instance.Saldo = value; RaisePropertyChanged(() => SaldoActual); }
 		}
 
 		private decimal saldoARecargar;
@@ -32,49 +32,32 @@ namespace RTP.ViewModels
 			this.dialogs = dialogService;
 		}
 
-		/*
-		 public DialogsViewModel(IUserDialogService dialogService, IMvxMessenger messenger) { 
-	56 			this.dialogs = dialogService; 
-	57             
-	58             
-	59             
-	60 
- 
-	61             this.SendBackgroundAlert = new MvxCommand(() =>  
-	62                 messenger.Publish(new BackgroundAlert(this, "Test")) 
-	63             ); 
-	64 
- 
-	65             this.ActionSheet = new MvxCommand(() =>  
-	66                 dialogService.ActionSheet(new ActionSheetConfig() 
-	67                     .SetTitle("Test Title") 
-	68                     .Add("Option 1", () => this.Result = "Option 1 Selected") 
-	69                     .Add("Option 2", () => this.Result = "Option 2 Selected") 
-	70                     .Add("Option 3", () => this.Result = "Option 3 Selected") 
-	71                     .Add("Option 4", () => this.Result = "Option 4 Selected") 
-	72                     .Add("Option 5", () => this.Result = "Option 5 Selected") 
-	73                     .Add("Option 6", () => this.Result = "Option 6 Selected") 
-	74                 ) 
-	75             ); 
-
-	 
-		 */
-
 		public ICommand GooglePlay
 		{
 			get
 			{
 				return new MvxCommand(async () =>
 				{
-					 var r = await dialogs.ConfirmAsync("Pick a choice", "Pick Title", "Yes", "No");
-					 var text = (r ? "Yes" : "No");
+					await dialogs.AlertAsync("Esta es una versión de prueba, por lo que agregará saldo sin cobrarte", "Trabajo en progreso");
+					var valid = await Services.Passenger.AddCredit(SaldoARecargar);
+					if (valid)
+					{
+						SaldoActual += SaldoARecargar;
+						await dialogs.AlertAsync(String.Format("Se han recargado ${0} a tu cuenta", SaldoARecargar), "Pago validado");
+						Close(this);
+					}
+					else
+					{
+						SaldoARecargar = 0.00M;
+						await dialogs.AlertAsync("No se pudo validar el pago", "Error");
+					}
 				});
 			}
 		}
 
-		//public ICommand SMS
-		//{
-
-		//}
+		public ICommand SMS
+		{
+			get { return GooglePlay; }
+		}
 	}
 }
