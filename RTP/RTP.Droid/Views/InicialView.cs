@@ -4,13 +4,13 @@ using Cirrious.MvvmCross.Droid.Views;
 
 namespace RTP.Droid.Views
 {
-    [Activity(Label = "View for FirstViewModel")]
-    public class FirstView : MvxActivity
+    [Activity(Label = "View for InicialViewModel")]
+    public class InicialView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.FirstView);
+            SetContentView(Resource.Layout.InicialView);
         }
     }
 }

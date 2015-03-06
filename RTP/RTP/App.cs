@@ -11,7 +11,7 @@ namespace RTP
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterAppStart<ViewModels.InicialViewModel>();
         }
     }
 }

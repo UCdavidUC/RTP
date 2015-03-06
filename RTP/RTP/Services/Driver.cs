@@ -54,13 +54,13 @@ namespace RTP.Services
 			return result.Data;
 		}
 
-		public static async Task<List<Payment>> GetHistory()
+		public static async Task<List<PaymentViewModel>> GetHistory()
 		{
 			var request = new RestRequest("api/GetHistory", HttpMethod.Get);
 
 			request.AddHeader("Authentication", loginId);
 
-			var result = await client.Execute<List<Payment>>(request);
+			var result = await client.Execute<List<PaymentViewModel>>(request);
 			return result.Data;
 		}
 	}

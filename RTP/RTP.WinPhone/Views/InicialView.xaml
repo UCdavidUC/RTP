@@ -1,5 +1,5 @@
 <views:MvxPhonePage
-    x:Class="RTP.WinPhone.Views.FirstView"
+    x:Class="RTP.WinPhone.Views.InicialView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -28,7 +28,7 @@
         </StackPanel>
 
         <StackPanel x:Name="SelecTipoUsuaio" Grid.Row="1" Margin="0,17,0,28">
-            <Button x:Name="SPasajero" Margin="9,7,0,0" Content="Soy Pasajero" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Blue" Height="120" MinHeight="100" Width="250" MinWidth="200"/>
+			<Button x:Name="SPasajero" Margin="9,7,0,0" Content="Soy Pasajero" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Blue" Height="120" MinHeight="100" Width="250" MinWidth="200" Command="{Binding PassengerCommand}"/>
             <Button x:Name="SConductor" Margin="9,7,0,0" Content="Soy Conductor" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Red" Height="120" MinHeight="100" Width="250" MinWidth="200"/>
         </StackPanel>
     </Grid>

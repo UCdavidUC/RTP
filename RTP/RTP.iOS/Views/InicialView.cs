@@ -7,8 +7,8 @@ using UIKit;
 
 namespace RTP.iOS.Views
 {
-    [Register("FirstView")]
-    public class FirstView : MvxViewController
+    [Register("InicialView")]
+    public class InicialView : MvxViewController
     {
         public override void ViewDidLoad()
         {
@@ -26,7 +26,7 @@ namespace RTP.iOS.Views
             var textField = new UITextField(new CGRect(10, 50, 300, 40));
             Add(textField);
 
-            var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
+            var set = this.CreateBindingSet<InicialView, RTP.ViewModels.InicialViewModel>();
             set.Bind(label).To(vm => vm.Hello);
             set.Bind(textField).To(vm => vm.Hello);
             set.Apply();

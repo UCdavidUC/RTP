@@ -39,8 +39,13 @@
     <Compile Include="Services\Driver.cs" />
     <Compile Include="Services\Passenger.cs" />
     <Compile Include="Services\Preferences.cs" />
-    <Compile Include="ViewModels\FirstViewModel.cs" />
-    <Compile Include="ViewModels\Payment.cs" />
+    <Compile Include="ViewModels\AddCreditViewModel.cs" />
+    <Compile Include="ViewModels\DriverLoginViewModel.cs" />
+    <Compile Include="ViewModels\DriverViewModel.cs" />
+    <Compile Include="ViewModels\InicialViewModel.cs" />
+    <Compile Include="ViewModels\PassengerViewModel.cs" />
+    <Compile Include="ViewModels\PaymentViewModel.cs" />
+    <Compile Include="ViewModels\PayViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.MvvmCross.Plugins.BarCodeScanner">
