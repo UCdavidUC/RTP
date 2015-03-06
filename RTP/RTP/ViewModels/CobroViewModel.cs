@@ -20,7 +20,7 @@ namespace RTP.ViewModels
 
         public ICommand plusAction
         {
-            get { return new MvxCommand(() => 
+            get { return new MvxCommand(() =>
             {
                 NumeroPasajeros++;
             }); }
@@ -39,7 +39,14 @@ namespace RTP.ViewModels
 
         public ICommand Cobro
         {
-            get { return new MvxCommand(() => ShowViewModel<QRViewModel>()); }
+			get
+			{
+				return new MvxCommand(async () =>
+				{
+					Guid code = await Services.Driver.RequestPayment(NumeroPasajeros);
+					ShowViewModel<QRViewModel>(new { code });
+				});
+			}
         }
     }
 }

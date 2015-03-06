@@ -21,7 +21,10 @@ namespace RTP.ViewModels
 		{
 			get
 			{
-				return new MvxCommand(() => ShowViewModel<HistorialViewModel>());
+				return new MvxCommand(() =>
+				{
+					ShowViewModel<HistorialViewModel>();
+				});
 			}
 		}
 	}

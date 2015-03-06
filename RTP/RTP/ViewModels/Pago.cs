@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RTP.ViewModels
 {
-	public class PaymentViewModel : MvxViewModel
+	public class Pago : MvxViewModel
 	{
 		private DateTime date;
 		public DateTime Date

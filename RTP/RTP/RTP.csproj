@@ -50,7 +50,7 @@
     <Compile Include="ViewModels\DriverViewModel.cs" />
     <Compile Include="ViewModels\InicialViewModel.cs" />
     <Compile Include="ViewModels\PasajeroViewModel.cs" />
-    <Compile Include="ViewModels\PaymentViewModel.cs" />
+    <Compile Include="ViewModels\Pago.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.MvvmCross.Plugins.BarCodeScanner">

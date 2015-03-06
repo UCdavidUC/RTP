@@ -37,16 +37,19 @@ namespace RTP.Services
 #endif
 		}
 
-		public static async Task<Guid> RequestPayment(int passengerCount, int passengerWithDiscountCount)
+		public static async Task<Guid> RequestPayment(int passengerCount)
 		{
+#if DEBUG
+			return Guid.NewGuid();
+#else
 			var request = new RestRequest("api/RequestPayment", HttpMethod.Post);
 			request.AddParameter("passengerCount", passengerCount);
-			request.AddParameter("passengerWithDiscountCount", passengerWithDiscountCount);
 
 			request.AddHeader("Authentication", loginId);
 
 			var result = await client.Execute<Guid>(request);
 			return result.Data;
+#endif
 		}
 
 		public static async Task<bool> ReceivePayment(Guid paymentId)
@@ -60,14 +63,38 @@ namespace RTP.Services
 			return result.Data;
 		}
 
-		public static async Task<List<PaymentViewModel>> GetHistory()
+		public static async Task<List<Pago>> GetHistory()
 		{
+#if DEBUG
+			return new List<Pago>
+			{
+				new Pago
+				{
+					Date = DateTime.Now,
+					NumPassengers = 1,
+					TotalIncome = 5,
+				},
+				new Pago
+				{
+					Date = DateTime.Now.AddDays(-1),
+					NumPassengers = 20,
+					TotalIncome = 100,
+				},
+				new Pago
+				{
+					Date = DateTime.Now.AddDays(-2),
+					NumPassengers = 6,
+					TotalIncome = 30,
+				},
+			};
+#else
 			var request = new RestRequest("api/GetHistory", HttpMethod.Get);
 
 			request.AddHeader("Authentication", loginId);
 
-			var result = await client.Execute<List<PaymentViewModel>>(request);
+			var result = await client.Execute<List<Pago>>(request);
 			return result.Data;
+#endif
 		}
 	}
 }

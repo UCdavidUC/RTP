@@ -23,8 +23,9 @@
           >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
@@ -32,15 +33,34 @@
         </StackPanel>
 
         <Grid x:Name="Subtitles" Grid.Row="1">
-            <StackPanel x:Name="SubtitlesPanel" Margin="0,0,0,12">
-                <TextBlock x:Name="Detalle" Text="Total Acumulado:" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFAA6C24"/>
+            <StackPanel x:Name="SubtitlesPanel" Margin="0,0,0,12" Orientation="Horizontal">
+                <TextBlock x:Name="Detalle" Text="Total Acumulado: " Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFAA6C24"/>
+				<TextBlock Text="{Binding TotalAcumulado}" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="Lao UI" Foreground="#FFAA6C24"/>
             </StackPanel>
         </Grid>
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="2" Margin="12,0,12,0">
-            <Image Height="40" Source="/Views/Logo.png" Margin="0,0,0,10" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+		<Grid x:Name="ContentPanel" Grid.Row="2" Margin="12,0,12,0">
+			<Image Height="40" Source="/Views/Logo.png" Margin="0,0,0,10" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+			<ListBox
+                ItemsSource="{Binding Pagos}">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel Margin="12">
+							<TextBlock FontFamily="Lao UI" Foreground="#FFAA6C24" Text="{Binding Date}"/>
+							<StackPanel Orientation="Horizontal">
+								<TextBlock FontFamily="Lao UI" Foreground="#FFAA6C24" Text="Pasajeros: "/>
+								<TextBlock FontFamily="Lao UI" Foreground="#FFAA6C24" Text="{Binding NumPassengers}"/>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<TextBlock FontFamily="Lao UI" Foreground="#FFAA6C24" Text="Total: "/>
+								<TextBlock FontFamily="Lao UI" Foreground="#FFAA6C24" Text="{Binding TotalIncome}"/>
+							</StackPanel>
+						</StackPanel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
 
-        </Grid>
+		</Grid>
     </Grid>
 
 </views:MvxPhonePage>

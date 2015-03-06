@@ -29,7 +29,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel x:Name="QrCodeGen" Margin="0,0,0,0">
-                <Image x:Name="QR" Width="410" Height="410" Margin="0,10,0,0" />
+				<Image Source="{Binding ImageBytes, Converter={StaticResource BytesToImageConverter}}" Width="410" Height="410" Margin="0,10,0,0" />
                 <Button x:Name="Cancelar" Content="Cancelar" FontFamily="Lao UI" Foreground="#FFAA6C24" BorderBrush="#FFAA6C24" Background="#FFFFCA8D" Width="410" Height="110" FontSize="35" Margin="0,15,0,0"/>
             </StackPanel>
             <Image Height="40" Source="/Views/Logo.png" Margin="0,0,0,10" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>

@@ -7,8 +7,9 @@
 
     <!--Application Resources-->
     <Application.Resources>
-        <local:LocalizedStrings xmlns:local="clr-namespace:RTP.WinPhone" x:Key="LocalizedStrings"/>
-    </Application.Resources>
+		<local:LocalizedStrings xmlns:local="clr-namespace:RTP.WinPhone" x:Key="LocalizedStrings"/>
+		<local:BytesToImageConverter xmlns:local="clr-namespace:RTP.WinPhone.Converters" x:Key="BytesToImageConverter"/>
+	</Application.Resources>
 
     <Application.ApplicationLifetimeObjects>
         <!--Required object that handles lifetime events for the application-->
