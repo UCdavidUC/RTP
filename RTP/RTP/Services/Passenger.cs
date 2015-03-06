@@ -15,6 +15,10 @@ namespace RTP.Services
 
 		public static async Task CreateUser()
 		{
+#if DEBUG
+			loginId = Guid.NewGuid();
+			return;
+#else
 			var request = new RestRequest("api/CreatePassenger", HttpMethod.Post);
 			var id = Guid.NewGuid();
 			request.AddParameter("guid", id);
@@ -28,6 +32,7 @@ namespace RTP.Services
 			{
 				loginId = default(Guid);
 			}
+#endif
 		}
 
 		public static async Task<bool> AddCredit(decimal amount)

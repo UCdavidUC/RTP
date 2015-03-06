@@ -2,9 +2,9 @@
 
 namespace RTP.WinPhone.Views
 {
-    public partial class Pasajero : MvxPhonePage
+    public partial class RecargaSaldoView : MvxPhonePage
     {
-        public Pasajero()
+        public RecargaSaldoView()
         {
             InitializeComponent();
         }

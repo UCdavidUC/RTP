@@ -15,7 +15,7 @@ namespace RTP.ViewModels
 					try
 					{
 						await Services.Passenger.CreateUser();
-						ShowViewModel<PassengerViewModel>();
+						ShowViewModel<PasajeroViewModel>();
 					}
 					catch (Exception) { }
 				});
