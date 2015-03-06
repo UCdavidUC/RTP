@@ -106,6 +106,9 @@
     <Compile Include="Views\Conductor.xaml.cs">
       <DependentUpon>Conductor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ExitoLogin.xaml.cs">
+      <DependentUpon>ExitoLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ExitoPago.xaml.cs">
       <DependentUpon>ExitoPago.xaml</DependentUpon>
     </Compile>
@@ -128,6 +131,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="Views\Conductor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExitoLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
