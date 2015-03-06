@@ -130,14 +130,14 @@
     <Compile Include="Views\InicialView.xaml.cs">
       <DependentUpon>InicialView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pasajero.xaml.cs">
-      <DependentUpon>Pasajero.xaml</DependentUpon>
+    <Compile Include="Views\PasajeroView.xaml.cs">
+      <DependentUpon>PasajeroView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\QRView.xaml.cs">
       <DependentUpon>QRView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\RecargaSaldo.xaml.cs">
-      <DependentUpon>RecargaSaldo.xaml</DependentUpon>
+    <Compile Include="Views\RecargaSaldoView.xaml.cs">
+      <DependentUpon>RecargaSaldoView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RechazoPago.xaml.cs">
       <DependentUpon>RechazoPago.xaml</DependentUpon>
@@ -184,17 +184,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Pasajero.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Views\PasajeroView.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\QRView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\RecargaSaldo.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Views\RecargaSaldoView.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\RechazoPago.xaml">
       <SubType>Designer</SubType>
@@ -277,6 +277,10 @@
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Localization">
       <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\wp8\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.5.0\lib\wp8\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.WindowsPhone">
       <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0\lib\wp8\Cirrious.MvvmCross.WindowsPhone.dll</HintPath>

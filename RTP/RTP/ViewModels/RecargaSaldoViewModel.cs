@@ -44,7 +44,6 @@ namespace RTP.ViewModels
 					{
 						SaldoActual += SaldoARecargar;
 						await dialogs.AlertAsync(String.Format("Se han recargado ${0} a tu cuenta", SaldoARecargar), "Pago validado");
-						Close(this);
 					}
 					else
 					{

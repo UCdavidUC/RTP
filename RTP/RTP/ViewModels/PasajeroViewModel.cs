@@ -22,7 +22,12 @@ namespace RTP.ViewModels
 
 		public ICommand Paga
 		{
-			get { return new MvxCommand(() => ShowViewModel<PayViewModel>()); }
+			get { return new MvxCommand(() => ShowViewModel<CamaraViewModel>()); }
+		}
+
+		public void OnMadeVisible()
+		{
+			RaisePropertyChanged(() => Saldo);
 		}
 	}
 }
